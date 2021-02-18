@@ -9,4 +9,20 @@ balance = 3329
 annualInterestRate = 0.2
 # Expected output "Lowest Payment: 310"
 
+# Declare variables to calculate lowest possible monthly down payment
+
+year_months = 12
+monthlyInterestRate = annualInterestRate / year_months
+balance_temp = balance
+
+# Value to be found
+monthlyPayment = 10
+
+while balance_temp > 0:
+    # Calculate monthly interests
+    balance_temp -= monthlyPayment
+    monthlyPayment += 10
+
+
+print("Lowest Payment:", round(monthlyPayment, 2))
 
